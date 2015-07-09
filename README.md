@@ -24,7 +24,7 @@ There are two versions of this widget: the **Slide Show** and **Grid View**.
 
 Slide Show:
 
-![readme screenshot 1](https://files.foko.co/Foko%20PhotoFeed%20Wordpress%20Widget/Readme%20Pictures/foko-general-widget-readme-1.png)
+![readme screenshot 1](http://haoluo.ca/public_html/widgets/screenshots/scrshot_slideshow_widget.png)
 
 The slide show version is an iframe web widget, to use it, simply copy the following code to your html markup and replace the values for data-access-token, data-user-idand adata-photoset-id with your own:
 
@@ -57,7 +57,7 @@ You can configure the widget by changing the query strings, just enter the input
 
 Grid View:
 
-![readme screenshot 2](https://files.foko.co/Foko%20PhotoFeed%20Wordpress%20Widget/Readme%20Pictures/foko-general-widget-readme-2.png)
+![readme screenshot 2](http://haoluo.ca/public_html/widgets/screenshots/scrshot_gridview_widget.png)
 
 The gird view version is an embedded web widget, to use it please copy the following javascript code to your html markup where you want the widget to appear:
 Note: the javascript will append the widget to the parent div of where it is being placed.
