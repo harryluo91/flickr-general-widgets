@@ -1,0 +1,39 @@
+.photo_wrapper{
+/* width:500px;*/
+/* height: 1000px;*/
+   overflow: hidden;
+   text-align: center;
+}
+#loading{
+   padding-top: 10px;
+}
+#foko-search-icon{
+   position:relative;
+   display: block;
+   color: white;
+   height: 100%;
+   width: 100%;
+}
+.center_helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.item .overlay {
+/*    width: 150px;
+    height: 150px;*/
+    position: absolute;
+    opacity: 0;
+    top:0;
+    display: inline-block;
+    background-color: #3498db;
+}
+.item.overlay:hover {
+    opacity: .8;
+}
+.item .overlay i {
+    font-size: 2em;
+    opacity: 1;
+    color: #fff;
+    padding-top: 40%;
+}
