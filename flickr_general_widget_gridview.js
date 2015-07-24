@@ -198,7 +198,6 @@
                             photoURLThumb.push('https://farm' + val.farm + '.staticflickr.com/' + val.server + '/' + val.id + '_' + val.secret + '_q.jpg');
                         })
                         photoURL = [photoURLFull, photoURLThumb];
-                        console.log(photoURL);
                         return photoURL;
                     }).then(function(photoURL) {
                         $("#flickr-widget-photo-wrapper").css('width', photoWrapperWidth);
@@ -213,6 +212,13 @@
                             }
                             $("#flickr-widget-photo-wrapper").appendTo('</div></div>');
                         }
+                    }).then(function() {
+                        $('#flickr-widget-photo-wrapper').hide();
+                        $('#flickr-widget-loading').html('<span><i class="fa fa-spinner fa-spin fa-4x" id="foko_photo_wrapper_spinner"></i><p>Loading...</p></span>');
+                        $('#flickr-widget-photo-wrapper').imagesLoaded('always', function(instance) {
+                            $('#flickr-widget-loading').remove();
+                            $('#flickr-widget-photo-wrapper').show();
+                        });
                     }).then(function() {
                         $('.flickr-widget-photo-wrapper').magnificPopup({
                             delegate: 'a',

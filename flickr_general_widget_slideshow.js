@@ -34,7 +34,6 @@ try {
         numberOfPhotos = (numberOfPhotos === 0 || typeof numberOfPhotos != 'number') ? 20 : (numberOfPhotos > 40) ? 40 : numberOfPhotos;
 
         completeURL = baseURL + '&method=' + method + '&api_key=' + api_key + '&user_id=' + user_id + '&photoset_id=' + photoset_id + '&format=json&jsoncallback=?';
-        console.log(autoCycling);
 
         $.ajax({
             type: "GET",
@@ -55,7 +54,6 @@ try {
             })
             return photoURL;
         }).then(function(photoURL) {
-            console.log(photoURL);
             $("#photo_wrapper").append('<div id="carousel-example-generic" class="carousel slide"><span class="center_helper"></span><div class="carousel-inner" style="display: inline-block; vertical-align:middle" role="listbox"></div></div>');
             for (var i = 0; i < photoURL.length; i++) {
                 if (i == 0) {
@@ -107,10 +105,8 @@ try {
                 var autoCycleInterval;
                 if (autoCycling === "true") {
                     autoCycleInterval = 5000;
-                    console.log(autoCycleInterval);
                 } else {
                     autoCycleInterval = false;
-                    console.log(autoCycleInterval);
                 }
                 $('#carousel-example-generic').carousel({
                     interval: autoCycleInterval,
